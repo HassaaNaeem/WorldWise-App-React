@@ -9,7 +9,7 @@ import CityList from "./components/CityList";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [cities, setCities] = useState({});
+  const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const BASE_URL = "http://localhost:8000";
   useEffect(() => {
@@ -38,8 +38,14 @@ function App() {
           <Route path="pricing" element={<Pricing />} />
           <Route path="login" element={<Login />} />
           <Route path="app" element={<AppLayout />}>
-            <Route index element={<CityList />}></Route>
-            <Route path="cities" element={<CityList />}></Route>
+            <Route
+              index
+              element={<CityList cities={cities} isLoading={isLoading} />}
+            ></Route>
+            <Route
+              path="cities"
+              element={<CityList cities={cities} isLoading={isLoading} />}
+            ></Route>
             <Route path="countries" element={<p>List of countries</p>}></Route>
             <Route path="form" element={<p>Form</p>}></Route>
           </Route>
