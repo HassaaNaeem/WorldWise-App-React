@@ -23,15 +23,9 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="app" element={<AppLayout />}>
             <Route index element={<Navigate to="cities" replace />} />
-            <Route
-              path="cities"
-              element={<CityList cities={cities} isLoading={isLoading} />}
-            />
-            <Route path="cities/:id" element={<City cities={cities} />} />
-            <Route
-              path="countries"
-              element={<CountryList cities={cities} isLoading={isLoading} />}
-            ></Route>
+            <Route path="cities" element={<CityList />} />
+            <Route path="cities/:id" element={<City />} />
+            <Route path="countries" element={<CountryList />}></Route>
             <Route path="form" element={<Form />}></Route>
           </Route>
           <Route path="*" element={<PageNotFound />} />
