@@ -35,6 +35,18 @@
         "lng": 13.376933665713324
       },
       "id": "98443197"
+    },
+    {
+      "id": "8272",
+      "cityName": "Karachi",
+      "country": "Pakistan",
+      "emoji": "🇵🇰",
+      "date": "2026-03-24T20:48:39.604Z",
+      "notes": "Test",
+      "position": {
+        "lat": "24.826022026511325",
+        "lng": "67.05595545991707"
+      }
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
